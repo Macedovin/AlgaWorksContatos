@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
@@ -13,16 +14,6 @@ public class ContatosControle {
 	private static final ArrayList<Contato> LISTA_CONTATOS = new ArrayList<>();
 	
 	static {
-		
-//		Contato contato = new Contato();
-//		
-//		contato.setId("1");
-//		contato.setNome("João");
-//		contato.setTelefone("00000-0000");
-//		
-//		LISTA_CONTATOS.add(contato);
-
-//   	Using constructor 	
 		
 		LISTA_CONTATOS.add(new Contato("1", "Maria", "+55 21 00000-0000"));
 		LISTA_CONTATOS.add(new Contato("2", "João", "+55 21 00000-0000"));
@@ -34,6 +25,27 @@ public class ContatosControle {
 	@GetMapping
 	public String index() {
 		return "index";
+	}
+	
+	@GetMapping("/contatos")
+	public ModelAndView listar() {
+		
+		ModelAndView modelAndView = new ModelAndView("listar");
+		
+		modelAndView.addObject("contatos", LISTA_CONTATOS);
+		
+		return modelAndView;
+		
+	}
+	
+	@GetMapping("/contatos/novo")
+	public ModelAndView novo() {
+		
+		ModelAndView modelAndView = new ModelAndView("formulario");
+		
+		modelAndView.addObject("contato", new Contato()); 
+		
+		return modelAndView;
 	}
 
 }
