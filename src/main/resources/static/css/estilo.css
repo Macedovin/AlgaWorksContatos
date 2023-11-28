@@ -97,6 +97,10 @@ main section form div input {
 	width: 20em;
 }
 
+main section form div input:read-only {
+	background-color: #f2f2f2;
+}
+
 main section form div input::placeholder {
 	color: darkgrey;
 }
