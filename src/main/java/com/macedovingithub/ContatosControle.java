@@ -20,11 +20,11 @@ public class ContatosControle {
 	
 	static {
 		
-		LISTA_CONTATOS.add(new Contato("1", "Maria", "+55 21 00000-0000"));
-		LISTA_CONTATOS.add(new Contato("2", "João", "+55 21 00000-0000"));
-		LISTA_CONTATOS.add(new Contato("3", "Normandes", "+55 21 00000-0000"));
-		LISTA_CONTATOS.add(new Contato("4", "Thiago", "+55 21 00000-0000"));
-		LISTA_CONTATOS.add(new Contato("5", "Alexandre", "+55 21 00000-0000"));
+		LISTA_CONTATOS.add(new Contato("1", "Maria", "+55 21 93841-1736"));
+		LISTA_CONTATOS.add(new Contato("2", "João", "+55 21 92695-4367"));
+		LISTA_CONTATOS.add(new Contato("3", "Normandes", "+55 21 94055-9185"));
+		LISTA_CONTATOS.add(new Contato("4", "Thiago", "+55 21 97258-7321"));
+		LISTA_CONTATOS.add(new Contato("5", "Alexandre", "+55 21 92166-7627"));
 	}	
 	
 	@GetMapping
